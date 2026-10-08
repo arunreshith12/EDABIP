@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EDABIP Analytics</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <!-- <aside class="sidebar">
+
+        <div class="logo">
+            <span class="logo-icon">◈</span>
+            <span>EDABIP</span>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="#" class="menu-item">
+                <span>▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <span>▥</span>
+                <span>Power BI</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <span>☼</span>
+                <span>Tableau</span>
+            </a>
+
+            <a href="#" class="menu-item active">
+                <span>◔</span>
+                <span>Analytics</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <span>▣</span>
+                <span>Report</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <span>▤</span>
+                <span>Billing</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <span>♧</span>
+                <span>Users</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <span>⚙</span>
+                <span>Settings</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <span>↪</span>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+
+         AI Assistant -->
+<!-- 
+        <div class="ai-box">
+
+            <div class="robot-icon">🤖</div>
+
+            <h3>AI Assistant</h3>
+
+            <p>Your Intelligent Companion</p>
+
+            <button id="askAI">Ask AI</button>
+
+        </div>
+
+    </aside> --> 
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP HEADER -->
+
+        <header class="top-header">
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search"
+                >
+
+                <span id="clearSearch" class="clear-search">×</span>
+
+            </div>
+
+            <div class="header-icons">
+
+                <span>♧</span>
+
+                <div class="profile-icon">
+                    S
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE TITLE ================= -->
+
+        <section class="page-heading">
+
+            <h1>Analytics</h1>
+
+            <div class="heading-actions">
+
+                <span class="refresh-text">
+                    ↻ Last Refreshed:
+                    <strong id="refreshTime">2h ago</strong>
+                </span>
+
+                <button class="export-btn" id="exportBtn">
+                    ⇩ Export
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WELCOME CARD ================= -->
+
+        <section class="welcome-card">
+
+            <div class="welcome-content">
+
+                <div class="welcome-title">
+
+                    <h2>Welcome Back, Alin!</h2>
+
+                    <span class="real-time">
+                        ● Real Time
+                    </span>
+
+                </div>
+
+                <p>
+                    Stay Organised with real time insight,
+                    Monitor Your Business Performance and key Metrics.
+                </p>
+
+            </div>
+
+
+            <div class="welcome-actions">
+
+                <button class="filter-btn">
+                    ▣ &nbsp; Last 30 Days
+                </button>
+
+                <button class="filter-btn" id="categoryBtn">
+                    All Categories
+                    <span>⌄</span>
+                </button>
+
+                <button class="refresh-btn" id="refreshBtn">
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= KPI CARDS ================= -->
+
+        <section class="kpi-container">
+
+
+            <!-- Accuracy -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-top">
+
+                    <div class="kpi-icon">
+                        ▥
+                    </div>
+
+                    <h3>Model Accuracy</h3>
+
+                </div>
+
+                <div class="kpi-value">
+                    98.4%
+                </div>
+
+                <div class="mini-chart accuracy-chart"></div>
+
+                <span class="growth positive">
+                    ↗ +12% vs last month
+                </span>
+
+            </div>
+
+
+            <!-- Precision -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-top">
+
+                    <div class="kpi-icon">
+                        ▥
+                    </div>
+
+                    <h3>Precision</h3>
+
+                </div>
+
+                <div class="kpi-value">
+                    0.97
+                </div>
+
+                <div class="mini-line-chart">
+                    <svg viewBox="0 0 200 50">
+                        <path
+                            d="M0 30
+                            C20 32, 25 25, 40 30
+                            C55 35, 65 15, 80 25
+                            C95 35, 105 32, 120 30
+                            C140 27, 150 35, 165 20
+                            C180 12, 190 25, 200 18"
+                        />
+                    </svg>
+                </div>
+
+                <span class="growth negative">
+                    ↘ +0.3% vs last month
+                </span>
+
+            </div>
+
+
+            <!-- Recall -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-top">
+
+                    <div class="kpi-icon">
+                        ◉
+                    </div>
+
+                    <h3>Recall</h3>
+
+                </div>
+
+                <div class="kpi-value">
+                    0.96
+                </div>
+
+                <div class="mini-chart recall-chart"></div>
+
+                <span class="growth blue">
+                    ↗ +45 new this week
+                </span>
+
+            </div>
+
+
+            <!-- F1 -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-top">
+
+                    <div class="kpi-icon">
+                        ⌛
+                    </div>
+
+                    <h3>F1 Score</h3>
+
+                </div>
+
+                <div class="kpi-value">
+                    0.96
+                </div>
+
+                <div class="mini-chart f1-chart"></div>
+
+                <span class="growth positive">
+                    +8.1% vs last quarter
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHARTS ================= -->
+
+        <section class="charts-container">
+
+
+            <!-- Revenue Chart -->
+
+            <div class="chart-card revenue-card">
+
+                <div class="chart-header">
+
+                    <h2>Revenue Forecast</h2>
+
+                    <select id="revenueSelect">
+                        <option>Last 6 Months</option>
+                        <option>Last 3 Months</option>
+                        <option>Last 12 Months</option>
+                    </select>
+
+                </div>
+
+                <div class="revenue-chart">
+
+                    <div class="y-axis">
+                        <span>$100K</span>
+                        <span>$75K</span>
+                        <span>$50K</span>
+                        <span>$25K</span>
+                        <span>0</span>
+                    </div>
+
+                    <div class="chart-area">
+
+                        <div class="grid-line line1"></div>
+                        <div class="grid-line line2"></div>
+                        <div class="grid-line line3"></div>
+                        <div class="grid-line line4"></div>
+
+                        <svg
+                            viewBox="0 0 700 280"
+                            preserveAspectRatio="none"
+                            class="revenue-svg"
+                        >
+
+                            <defs>
+
+                                <linearGradient
+                                    id="revenueGradient"
+                                    x1="0"
+                                    y1="0"
+                                    x2="0"
+                                    y2="1"
+                                >
+
+                                    <stop
+                                        offset="0%"
+                                        stop-color="#8ee8e8"
+                                    />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-color="#7f9d9d"
+                                    />
+
+                                </linearGradient>
+
+                            </defs>
+
+
+                            <path
+                                class="revenue-fill"
+                                d="
+                                M0 210
+                                C60 195 90 180 140 195
+                                C200 210 230 170 280 155
+                                C330 140 360 155 400 165
+                                C450 175 490 125 540 105
+                                C590 85 640 75 700 65
+                                L700 280
+                                L0 280 Z
+                                "
+                            />
+
+                            <path
+                                class="revenue-line"
+                                d="
+                                M0 210
+                                C60 195 90 180 140 195
+                                C200 210 230 170 280 155
+                                C330 140 360 155 400 165
+                                C450 175 490 125 540 105
+                                C590 85 640 75 700 65
+                                "
+                            />
+
+                            <circle cx="0" cy="210" r="5"/>
+                            <circle cx="100" cy="185" r="5"/>
+                            <circle cx="160" cy="195" r="5"/>
+                            <circle cx="230" cy="170" r="5"/>
+                            <circle cx="310" cy="145" r="5"/>
+                            <circle cx="400" cy="165" r="5"/>
+                            <circle cx="490" cy="125" r="5"/>
+                            <circle cx="590" cy="85" r="5"/>
+                            <circle cx="700" cy="65" r="5"/>
+
+                        </svg>
+
+
+                        <div class="x-axis">
+
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                            <span>Aug</span>
+                            <span>Sep</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="axis-title">
+                    Month
+                </div>
+
+            </div>
+
+
+            <!-- Demand Prediction -->
+
+            <div class="chart-card demand-card">
+
+                <div class="chart-header">
+
+                    <h2>Demand Prediction (Next 7 Days)</h2>
+
+                    <select>
+                        <option>Last 6 Months</option>
+                        <option>Last 3 Months</option>
+                    </select>
+
+                </div>
+
+
+                <div class="bar-chart">
+
+                    <div class="bar y100"></div>
+                    <div class="bar y75"></div>
+                    <div class="bar y50"></div>
+                    <div class="bar y25"></div>
+                    <div class="bar y0"></div>
+
+                </div>
+
+
+                <div class="bars">
+
+                    <div class="bar-item">
+                        <span>23,000</span>
+                        <div class="bar-value b1"></div>
+                        <small>Mon</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span>35,000</span>
+                        <div class="bar-value b2"></div>
+                        <small>Tue</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span>65,000</span>
+                        <div class="bar-value b3"></div>
+                        <small>Wed</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span>95,000</span>
+                        <div class="bar-value b4"></div>
+                        <small>Thu</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span>55,000</span>
+                        <div class="bar-value b5"></div>
+                        <small>Fri</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span>45,000</span>
+                        <div class="bar-value b6"></div>
+                        <small>Sat</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span>60,000</span>
+                        <div class="bar-value b7"></div>
+                        <small>Sun</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MODEL REGISTRY ================= -->
+
+        <section class="model-section">
+
+            <div class="model-header">
+
+                <h2>ML Model Registry</h2>
+
+                <button id="viewAllBtn">
+                    View All⌄
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table id="modelTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>Model Name</th>
+                            <th>Type</th>
+                            <th>Accuracy</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Sales Forecasting</td>
+                            <td>Regression</td>
+                            <td>98.4%</td>
+                            <td>
+                                <span class="status training">
+                                    Training 75%
+                                </span>
+                            </td>
+                            <td>
+                                <button class="view-btn">View</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Demand Prediction</td>
+                            <td>Forecast</td>
+                            <td>94.2%</td>
+                            <td>
+                                <span class="status active-status">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <button class="view-btn">View</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Customer Churn</td>
+                            <td>Classification</td>
+                            <td>91.8%</td>
+                            <td>
+                                <span class="status active-status">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <button class="view-btn">View</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Inventory Optimization</td>
+                            <td>Optimization</td>
+                            <td>-</td>
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+                            <td>
+                                <button class="view-btn">View</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <p>
+                © 2026 EDABIP. All rights reserved.
+                Enterprise Data Analytics & Business Intelligence Platform
+            </p>
+
+            <p>
+                Privacy Policy · Terms · Help & Support
+                &nbsp;&nbsp; v2.1.0
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

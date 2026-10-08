@@ -1,0 +1,973 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6ff;
+    color: #111;
+}
+
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 212px;
+    height: 100vh;
+
+    background: #115553;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 10;
+}
+
+
+/* Logo */
+
+.logo {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 24px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    font-size: 34px;
+    margin-right: 8px;
+}
+
+
+/* Sidebar menu */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 25px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.menu-item span:first-child {
+    font-size: 20px;
+}
+
+.menu-item:hover {
+    background: #287573;
+}
+
+.menu-item.active {
+    background: #287573;
+
+    border-left: 3px solid #f4d35e;
+}
+
+
+/* =========================
+   AI BOX
+========================= */
+
+.ai-box {
+    margin: auto 18px 30px;
+
+    padding: 12px;
+
+    background: #399a9a;
+
+    border-radius: 4px;
+
+    text-align: center;
+}
+
+.robot-icon {
+    font-size: 36px;
+}
+
+.ai-box h3 {
+    margin-top: 4px;
+    font-size: 15px;
+}
+
+.ai-box p {
+    font-size: 11px;
+    margin: 5px 0 12px;
+}
+
+.ai-box button {
+    width: 100%;
+
+    border: none;
+
+    padding: 10px;
+
+    background: #075554;
+    color: white;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    margin-left: 212px;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   TOP HEADER
+========================= */
+
+.top-header {
+    height: 60px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 24px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+/* Search */
+
+.search-box {
+    width: 356px;
+    height: 36px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+
+    gap: 8px;
+}
+
+.search-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    font-size: 13px;
+}
+
+.clear-search {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Header icons */
+
+.header-icons {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    font-size: 22px;
+}
+
+.profile-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #e1e1e1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 22px 16px;
+}
+
+.page-heading h1 {
+    font-size: 25px;
+}
+
+.heading-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.refresh-text {
+    font-size: 12px;
+}
+
+.export-btn {
+    background: #115553;
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   WELCOME CARD
+========================= */
+
+.welcome-card {
+    margin: 0 22px 22px;
+
+    padding: 18px;
+
+    background: white;
+
+    border-radius: 6px;
+
+    box-shadow: 0 3px 10px rgba(50, 50, 100, 0.08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.welcome-title h2 {
+    font-size: 24px;
+}
+
+.real-time {
+    border: 1px solid #65a64b;
+
+    color: #174a1a;
+
+    border-radius: 20px;
+
+    padding: 5px 12px;
+
+    font-size: 10px;
+}
+
+.welcome-content p {
+    margin-top: 5px;
+
+    font-size: 11px;
+}
+
+.welcome-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn,
+.refresh-btn {
+    height: 35px;
+
+    padding: 0 14px;
+
+    background: white;
+
+    border: 1px solid #356866;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.refresh-btn {
+    background: #115553;
+    color: white;
+}
+
+
+/* =========================
+   KPI CARDS
+========================= */
+
+.kpi-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    padding: 0 22px 24px;
+}
+
+.kpi-card {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 15px;
+
+    min-height: 165px;
+
+    padding: 18px;
+
+    box-shadow: 0 3px 8px rgba(50, 50, 100, 0.08);
+}
+
+.kpi-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.kpi-icon {
+    width: 42px;
+    height: 42px;
+
+    background: #115553;
+    color: white;
+
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.kpi-top h3 {
+    font-size: 17px;
+}
+
+.kpi-value {
+    margin-top: 22px;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.growth {
+    position: absolute;
+
+    left: 18px;
+    bottom: 16px;
+
+    padding: 5px 8px;
+
+    border-radius: 3px;
+
+    font-size: 9px;
+}
+
+.positive {
+    background: #d8f8d8;
+}
+
+.negative {
+    background: #f9d7d7;
+}
+
+.blue {
+    background: #d9e7ff;
+}
+
+
+/* Mini charts */
+
+.mini-chart {
+    position: absolute;
+
+    right: 20px;
+    top: 78px;
+
+    width: 140px;
+    height: 38px;
+
+    background: linear-gradient(
+        180deg,
+        #a4eeee,
+        transparent
+    );
+
+    clip-path: polygon(
+        0 70%,
+        5% 10%,
+        10% 70%,
+        15% 35%,
+        20% 70%,
+        28% 30%,
+        35% 70%,
+        43% 45%,
+        50% 70%,
+        58% 35%,
+        65% 70%,
+        72% 40%,
+        80% 70%,
+        88% 45%,
+        95% 70%,
+        100% 55%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.mini-line-chart {
+    position: absolute;
+
+    right: 15px;
+    top: 78px;
+
+    width: 150px;
+    height: 40px;
+}
+
+.mini-line-chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.mini-line-chart path {
+    fill: none;
+
+    stroke: #115553;
+
+    stroke-width: 2;
+}
+
+
+/* =========================
+   CHART SECTION
+========================= */
+
+.charts-container {
+    display: grid;
+
+    grid-template-columns: 2fr 1.3fr;
+
+    gap: 16px;
+
+    padding: 0 22px 24px;
+}
+
+.chart-card {
+    background: white;
+
+    border: 1px solid #dedede;
+
+    border-radius: 6px;
+
+    padding: 18px;
+
+    min-height: 305px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.chart-header h2 {
+    font-size: 17px;
+}
+
+.chart-header select {
+    padding: 8px 12px;
+
+    border: 1px solid #366c69;
+
+    border-radius: 5px;
+
+    background: white;
+}
+
+
+/* =========================
+   REVENUE CHART
+========================= */
+
+.revenue-chart {
+    display: flex;
+
+    height: 205px;
+}
+
+.y-axis {
+    width: 45px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+    color: #999;
+
+    padding-bottom: 25px;
+}
+
+.chart-area {
+    position: relative;
+
+    flex: 1;
+
+    border-left: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+.grid-line {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    border-top: 1px dashed #e1e1e1;
+}
+
+.line1 {
+    top: 0;
+}
+
+.line2 {
+    top: 25%;
+}
+
+.line3 {
+    top: 50%;
+}
+
+.line4 {
+    top: 75%;
+}
+
+.revenue-svg {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.revenue-fill {
+    fill: url(#revenueGradient);
+    opacity: 0.8;
+}
+
+.revenue-line {
+    fill: none;
+
+    stroke: #164f4e;
+
+    stroke-width: 3;
+}
+
+.revenue-svg circle {
+    fill: #164f4e;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.x-axis {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -22px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 9px;
+
+    color: #888;
+}
+
+.axis-title {
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-size: 10px;
+
+    color: #888;
+}
+
+
+/* =========================
+   DEMAND BAR CHART
+========================= */
+
+.demand-card {
+    position: relative;
+}
+
+.bars {
+    height: 205px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    gap: 10px;
+
+    padding: 20px 10px 0;
+
+    border-bottom: 1px solid #aaa;
+}
+
+.bar-item {
+    height: 100%;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    position: relative;
+}
+
+.bar-item > span {
+    font-size: 9px;
+
+    margin-bottom: 4px;
+}
+
+.bar-value {
+    width: 34px;
+
+    border-radius: 4px 4px 0 0;
+}
+
+.bar-item small {
+    margin-top: 8px;
+
+    font-size: 9px;
+
+    color: #888;
+}
+
+.b1 {
+    height: 23%;
+    background: #9ce8e0;
+}
+
+.b2 {
+    height: 35%;
+    background: #c9abe9;
+}
+
+.b3 {
+    height: 65%;
+    background: #b8c9ef;
+}
+
+.b4 {
+    height: 95%;
+    background: #416d6d;
+}
+
+.b5 {
+    height: 55%;
+    background: #849e9e;
+}
+
+.b6 {
+    height: 45%;
+    background: #9ac6c8;
+}
+
+.b7 {
+    height: 60%;
+    background: #e9a9ad;
+}
+
+
+/* =========================
+   MODEL TABLE
+========================= */
+
+.model-section {
+    margin: 0 22px 25px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    padding: 18px;
+}
+
+.model-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.model-header h2 {
+    font-size: 17px;
+}
+
+.model-header button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 12px;
+}
+
+thead {
+    background: #115553;
+    color: white;
+}
+
+th,
+td {
+    padding: 8px 12px;
+
+    text-align: left;
+
+    border: 1px solid #ddd;
+}
+
+th {
+    font-weight: normal;
+}
+
+.status {
+    padding: 3px 10px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+}
+
+.training {
+    border: 1px solid #e46c6c;
+    color: #a53535;
+}
+
+.active-status {
+    border: 1px solid #62a74f;
+    color: #438438;
+}
+
+.pending {
+    border: 1px solid #df6565;
+    color: #b53838;
+}
+
+.view-btn {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #111;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 0 22px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #999;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .kpi-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        width: 65px;
+    }
+
+    .sidebar .logo span:last-child,
+    .menu-item span:last-child,
+    .ai-box h3,
+    .ai-box p,
+    .ai-box button {
+        display: none;
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .ai-box {
+        margin: auto 8px 20px;
+        background: transparent;
+    }
+
+    .main-content {
+        margin-left: 65px;
+    }
+
+    .kpi-container {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .welcome-actions {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .top-header {
+        padding: 0 10px;
+    }
+
+    .search-box {
+        width: 200px;
+    }
+
+    .welcome-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .heading-actions {
+        flex-wrap: wrap;
+    }
+
+    .charts-container,
+    .kpi-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .welcome-card,
+    .model-section {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
