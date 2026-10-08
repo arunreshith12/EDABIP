@@ -248,3 +248,8 @@ Authentication
 Backend integration
 Real-time analytics
 Interactive chart tooltips
+
+
+Screenshort: 
+<img width="1240" height="765" alt="Screenshot 2026-10-08 at 4 46 29 PM" src="https://github.com/user-attachments/assets/17031a33-35d5-4a14-97c3-d90690e2a8de" />
+
